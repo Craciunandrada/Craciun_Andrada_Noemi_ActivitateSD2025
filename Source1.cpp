@@ -153,7 +153,7 @@ void stergeMasinaDupaID(/*lista masini*/ int id) {
 }
 
 char* getNumeSoferMasinaScumpa(listaDubla lista) {
-	
+
 	nod* max = lista.first;
 	lista.first = lista.first->next;
 	while (lista.first) {
