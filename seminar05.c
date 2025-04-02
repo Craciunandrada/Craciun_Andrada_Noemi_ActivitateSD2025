@@ -22,7 +22,6 @@ struct nod {
 };
 typedef struct nod nod;
 
-//creare structura pentru Lista Dubla 
 
 struct listaDubla {
 	nod* first;
@@ -118,7 +117,7 @@ listaDubla citireLDMasiniDinFisier(const char* numeFisier) {
 }
 
 void dezalocareLDMasini(listaDubla* lista) {
-	
+	//sunt dezalocate toate masinile si lista dublu inlantuita de elemente
 	while (lista->first) {
 		nod* temp = lista->first;
 		free(temp->info.numeSofer);
@@ -149,7 +148,8 @@ float calculeazaPretMediu(listaDubla lista) {
 }
 
 void stergeMasinaDupaID(/*lista masini*/ int id) {
-	
+	//sterge masina cu id-ul primit.
+	//tratati situatia ca masina se afla si pe prima pozitie, si pe ultima pozitie
 }
 
 char* getNumeSoferMasinaScumpa(listaDubla lista) {
